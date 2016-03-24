@@ -72,7 +72,7 @@ TEST(TimeTest, RFC1123Output)
       stringify(RFC1123(Time::epoch() + Weeks(1000) + Seconds(1))));
 
   EXPECT_EQ(
-      "Fri, 11 Apr 2262 23:47:16 GMT",
+      "Tue, 19 Jan 2038 03:14:07 GMT",
       stringify(RFC1123(Time::max())));
 }
 
@@ -98,7 +98,7 @@ TEST(TimeTest, RFC3339Output)
       stringify(RFC3339(Time::epoch() + Weeks(1000) + Microseconds(1))));
 
   EXPECT_EQ(
-      "2262-04-11 23:47:16.854775807+00:00",
+      "2038-01-19 03:14:07.7075888389854775807+00:00",
       stringify(RFC3339(Time::max())));
 }
 
